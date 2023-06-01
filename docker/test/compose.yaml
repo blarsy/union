@@ -1,0 +1,7 @@
+version: '2.1'
+services: 
+  proxy:
+    build:
+      context: './proxy'
+    ports:
+      - "8001:80"

@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  proxy-build-time:
+    build:
+      context: './proxy_build_time'
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/var/local
+networks:
+  proxynet:
+    name: union_network
