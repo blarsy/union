@@ -10,7 +10,7 @@ const Creators = () => {
             setCreators(await getCreators())
         }
         load()
-    })
+    }, [])
     
     return <CreatorsList data={creators} />
 }
